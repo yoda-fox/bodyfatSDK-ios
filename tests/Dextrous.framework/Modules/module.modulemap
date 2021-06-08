@@ -1,0 +1,6 @@
+framework module Dextrous {
+  umbrella header "Dextrous.h"
+
+  export *
+  module * { export * }
+}
