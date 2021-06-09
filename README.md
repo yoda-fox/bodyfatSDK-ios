@@ -1,6 +1,6 @@
 # Interact with the body fat scale to obtain various data of the human body
 
-# SDK instruction document
+# SDK usage instructions document
 
 [中文文档](https://github.com/yoda-fox/bodyfatSDK-ios/edit/main/bodyfatSDk%20Chinese%20document.md)  
 
@@ -9,7 +9,7 @@
     1.Xcode
    
     2.IOS 9.0 and above
-## Add permissions Add Bluetooth permissions in the Info.plist file
+## Add Bluetooth permissions to the “Info.plist”file
 
      1.Privacy-Bluetooth Peripheral Usage Description
    
@@ -21,11 +21,11 @@
      
 ## Declare header file
 
-     Declare #import <Dextrous/Dextrous.h> in the .m file that needs to be called
+     Declare it in the.m file that you want to call #import <Dextrous/Dextrous.h>
      
 ## Initialization
 
-   ### 1. Add in the Appdelegate.m didFinishLaunchingWithOptions method     
+   ### 1. Add at file “Appdelegate. Add m didFinishLaunchingWithOptions”
    
     [[BodySDKManager sharedInstance]BlueSharedInstance];
     
@@ -36,16 +36,16 @@
          }];
    ### 2. Parameter description        
          
-      appid, secret, you need to fill in the one you applied for.     
+      Appid, secret, need to fill in their application.    
       
    ### 3. Result callback:
    
-      resmodel.code = 0; is success resmodel.code = 1; is error error is request failure
-     
-      resmodel.msg is a prompt message of NSString type
+      resmodel.code = 0; For success resmodel.code = 1; Error is the request failed
+
+      ResModel. MSG is an NSString prompt
+
       
- ## To call the interface for obtaining various data of the human body, it is necessary to ensure that the user turns on the Bluetooth and the initialization is successful.
- 
+ ## Call the interface to obtain various human body data. Make sure that the user turns on Bluetooth and initializes successfully.
  
       [[BodySDKManager sharedInstance]deviceSearchSuccessScaleDeviceMacID:@"MacID" age:age height:height loginAccount:@"loginAccount" sex:sex thirdNickName:thirdNickName thirdUserNo:thirdUserNo deviceSuccess:^(id  _Nonnull bodyFatConfig) {
         NSLog(@"%@",bodyFatConfig);
@@ -60,7 +60,7 @@
 # Input parameter description
 
 
-   parameter     |Parameter Description   |type of data
+  Parameters | parameters introduction | data type
  -------- | :-----------:  | :-----------:
  loginAccount|user account|String
  thirdUserNo|user ID|int
@@ -70,7 +70,7 @@
  sex|Gender of the user (1: male, 0: female)|int
  MacID|MAC address of the measuring device (optional);<br>Format: XX:XX:XX:XX:XX:XX|String       
          
-### BodyFatConfig(Human body data)
+### Fill in parameters
 
  Data name     |How to Obtain   |Data type|Description
  -------- | :-----------:  | :-----------: | :-----------:
