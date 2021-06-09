@@ -56,7 +56,18 @@
             NSLog(@"%@",error);
             NSLog(@"");
         }];
-         
-         
+          
+# Input parameter description
+
+
+   parameter     |Parameter Description   |type of data
+ -------- | :-----------:  | :-----------:
+ loginAccount|user account|String
+ thirdUserNo|user ID|int
+ thirdNickName|User nickname|String
+ height|The height of the user (unit: cm, range: 100~220)|double
+ AGE|The age of the user (range: 10-99)|int
+ sex|Gender of the user (1: male, 0: female)|int
+ MacID|MAC address of the measuring device (optional);<br>Format: XX:XX:XX:XX:XX:XX|String       
          
          
