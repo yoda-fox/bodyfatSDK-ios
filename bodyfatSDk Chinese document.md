@@ -2,7 +2,7 @@
 
 # SDK使用说明文档
 
-[英文文档](https://github.com/yoda-fox/bodyfatSDK-ios/edit/main/README.md)  
+[English document](https://github.com/yoda-fox/bodyfatSDK-ios/edit/main/README.md)  
 
 ## 使用条件
 
