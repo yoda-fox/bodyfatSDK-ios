@@ -105,6 +105,10 @@
  body.weight | 重量|double
  body.MAC | 设备Mac地址|NSString|返回测量数据的体脂秤设备Mac地址
  body.impedanceStatus | 阻抗类型|int  |  **八极秤:** 1：手脚都接触电极; 2：只是脚接触秤电极;<br> 3：只是手接触手柄电极; -1：手脚都没接触电极<br> **普通脂肪秤:** 1：脚接触秤电极; -1：脚没有接触秤电极
+ body.upFat|上臂脂肪|double|
+ body.downFat|下臂脂肪|double|
+ body.upMuscle|上臂肌肉|double|
+ body.downMuscle|下臂肌肉|double|
  body.code | 返回状态 0为成功，1为失败|int
  body.Msg | 提示语|NSString|请求成功时返回的提示语
      
