@@ -18,7 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[BodySDKManager sharedInstance]deviceSearchSuccessScaleDeviceMacID:@"" age:18 height:172 loginAccount:@"150" sex:1 thirdNickName:@"fsvws" thirdUserNo:@"efwe" deviceSuccess:^(id  _Nonnull bodyFatConfig) {
+    UIButton *sen = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 200, 200)];
+    [sen addTarget:self action:@selector(sendOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    sen.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:sen];
+    
+}
+
+-(void)sendOnClick:(UIButton *)sender{
+    //等AppDeledate中registerApp方法调用成功后使用/Use it after the registerApp method in AppDeledate is called successfully
+    [[BodySDKManager sharedInstance]deviceSearchSuccessScaleDeviceMacID:@"00:00:00:00:00:00" age:18 height:172 loginAccount:@"用户账号/user account(必填/Required)" sex:1 thirdNickName:@"用户账号/user account(必填/Required)" thirdUserNo:@"用户ID/User ID(必填/Required)" deviceSuccess:^(id  _Nonnull bodyFatConfig) {
         NSLog(@"%@",bodyFatConfig);
         BodyFatConfig *body = [[BodyFatConfig alloc]init];
         body = bodyFatConfig;

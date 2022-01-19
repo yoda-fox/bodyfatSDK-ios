@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/BodyFatConfig.h</key>
 		<data>
-		pC2lA579L8SQUgkrSgIg2vNMhg4=
+		lpvfwTYEx++gZiL6KyX0b5FkJas=
 		</data>
 		<key>Headers/BodySDKManager.h</key>
 		<data>
-		YeWEHo8xN0WMf/a9cjD1VH1ey6o=
+		ga3Eau3hXz5woVvCoWzU/O7W5TA=
 		</data>
 		<key>Headers/Dextrous.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4c8hFzHKakr5edfiZm7U9FsHfE4=
+		lOouzsK+to8sLS/JkHcOlXINRzs=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -43,22 +43,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pC2lA579L8SQUgkrSgIg2vNMhg4=
+			lpvfwTYEx++gZiL6KyX0b5FkJas=
 			</data>
 			<key>hash2</key>
 			<data>
-			mTLvgVTnHXTTo+Dlid5RO5n5HYuDjIvKDLKHHmhtWPU=
+			alviDdD3aBa5qWGQAMAzP13xsfkXsJgDmuykTjGVn7A=
 			</data>
 		</dict>
 		<key>Headers/BodySDKManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YeWEHo8xN0WMf/a9cjD1VH1ey6o=
+			ga3Eau3hXz5woVvCoWzU/O7W5TA=
 			</data>
 			<key>hash2</key>
 			<data>
-			f5GDzcyRQADmmlL/U3zub46EYd7GIR22JSo7Ka/EkYE=
+			2fTq/c3eOi64WJBR5pv9IM+Avi/qFMC1e+jQE4vXYNU=
 			</data>
 		</dict>
 		<key>Headers/Dextrous.h</key>

@@ -34,8 +34,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)double waterKg;                              //水分
 @property(nonatomic,assign)double waterRate;                            //含水量
 @property(nonatomic,assign)double weight;                               //重量
+@property(nonatomic,strong)NSString *weightString;                      //重量字符串
 @property(nonatomic,strong)NSString *MAC;                               //设备Mac地址
 @property(nonatomic,assign)int impedanceStatus;                         //阻抗类型
+@property(nonatomic,assign)double upFat;                                //上臂脂肪
+@property(nonatomic,assign)double downFat;                              //下肢脂肪
+@property(nonatomic,assign)double upMuscle;                             //上臂肌肉
+@property(nonatomic,assign)double downMuscle;                           //上臂肌肉
 @property(nonatomic,assign)int code;                                    //返回状态 0为成功，1为失败
 @property(nonatomic,strong)NSString *Msg;                               //提示语
 ////阻抗类型

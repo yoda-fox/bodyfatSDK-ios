@@ -14,18 +14,22 @@
 
 @implementation AppDelegate
 
-
 -  (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // [NSThread sleepForTimeInterval:1];
      self.window.backgroundColor = [UIColor whiteColor];
      [self.window makeKeyAndVisible];
+    
      [[BodySDKManager sharedInstance]BlueSharedInstance];
     
-     [[BodySDKManager sharedInstance]registerApp:@"" withSecret:@"" success:^(id  _Nonnull responseModel) {
+     [[BodySDKManager sharedInstance]registerApp:@"d82a7485030fe83b0d955f4792f0ce03" withSecret:@"XenwE4VpZxRX0xMfSiqCkdKgzzPq0JGUSFCEzS91vKyL3fAXj4QXv0pvMzfBzg5g" success:^(id  _Nonnull responseModel) {
          NSLog(@"%@",responseModel);
          } failure:^(NSError * _Nonnull error) {
              NSLog(@"%@",error);
          }];
+    
+    ViewController *login = [[ViewController alloc]init];
+    UINavigationController *loginNav = [[UINavigationController alloc]initWithRootViewController:login];
+    self.window.rootViewController = loginNav;
      [[UIApplication sharedApplication] setIdleTimerDisabled:YES];//屏幕常亮
      return YES;
  }

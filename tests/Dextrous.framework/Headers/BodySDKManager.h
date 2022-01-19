@@ -21,6 +21,8 @@ typedef void(^Failure)(NSError *error);
 //responseModel.msg   返回语句 / Return statement
 
 -(void)registerApp:(NSString*)appId withSecret:(NSString*)appSecret success:(Success)success failure:(Failure)failure ;
+
+
 // 初始化 / initialization
 -(void)BlueSharedInstance;
 // 扫描蓝牙 / Scan Bluetooth
