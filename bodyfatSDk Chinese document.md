@@ -105,9 +105,183 @@
  body.weight | 重量|double
  body.MAC | 设备Mac地址|NSString|返回测量数据的体脂秤设备Mac地址
  body.impedanceStatus | 阻抗类型|int  |  **八极秤:** 1：手脚都接触电极; 2：只是脚接触秤电极;<br> 3：只是手接触手柄电极; -1：手脚都没接触电极<br> **普通脂肪秤:** 1：脚接触秤电极; -1：脚没有接触秤电极
+ body.upFat|上臂脂肪|double|
+ body.downFat|下臂脂肪|double|
+ body.upMuscle|上臂肌肉|double|
+ body.downMuscle|下臂肌肉|double|
  body.code | 返回状态 0为成功，1为失败|int
  body.Msg | 提示语|NSString|请求成功时返回的提示语
      
+## 参数范围说明
+### 1.体重
+#### 标准体重：standardWeight
+#### 男标准范围：
+    float downWeight = standardWeight  - standardWeight  * 0.1f;
+#### 女标准范围：
+    float upWeight = standardWeight  + standardWeight  * 0.1f; 
+#### 偏胖范围：
+    float fatWeight = standardWeight  + standardWeight  * 0.2f;
+#### 人的体重范围：
+ 分类     |标准范围
+ -------- | :-----------:
+偏瘦|weight<downWeight
+标准|downWeight≤weight<upWeight 
+偏胖|upWeight ≤weight<fatWeight 
+肥胖|weight≥fatWeight 
+			      			      
+### 2.BMI
+ 分类     |标准范围
+ -------- | :-----------:
+偏瘦|BMI<18.5
+标准|18.5≤BMI<24
+偏胖|24≤BMI<30
+肥胖|30≤BMI
+
+### 3.脂肪率
+#### 男性：
+如果年龄：小于 40
+low = 10f;<br>
+stander = 21f;<br>
+lightFat = 26f;<br>
+如果年龄： 大于等于40， 小于60 的<br>
+low = 11f;<br>
+stander = 22f;<br>
+lightFat = 27f;<br>
+如果年龄： 大于等于60 的<br>
+low = 13f;<br>
+stander = 24f;<br>
+lightFat = 29f;<br>
+#### 女性：
+如果年龄：小于 40<br>
+low = 20f;<br>
+stander = 34f;<br>
+lightFat = 39f;<br>
+如果年龄： 大于等于40， 小于60 的<br>
+low = 21f;<br>
+stander = 35f;<br>
+lightFat = 40f;<br>
+如果年龄： 大于等于60 的<br>
+low = 22f;<br>
+stander = 36f;<br>
+lightFat = 41f; <br>
+
+ 分类     |标准范围
+ -------- | :-----------:
+偏瘦|fat≤low
+标准|low<fat≤stander
+偏胖|stander<fat≤lightFat
+肥胖|lightFat<fat
+
+### 4.皮下脂肪率
+ 分类|男性标准范围|女性标准范围
+ -------- | :-----------: | :-----------:
+偏瘦|<8.6%|<18.5%
+标准|8.6%-16.7%|18.5%-26.7%
+偏胖|16.7%-20.7|26.7-30.8%
+肥胖|>20.7%|>30.8%	
+		
+### 5. 肌肉率
+#### 男性：
+身高：小于 160cm<br>
+low = 38.5f;<br>
+mid = 46.5f;<br>
+身高： 大于等于160， 小于等于170 的<br>
+low = 44f;<br>
+mid = 52.4f;<br>
+如果年龄： 大于 170 的<br>
+low = 49.4f;<br>
+mid = 59.4f;
+#### 女性：
+身高：小于 150cm<br>
+low = 29.1f;<br>
+mid = 34.7f;<br>
+身高： 大于等于150， 小于等于160 的<br>
+low = 32.9f;<br>
+mid = 37.5f;<br>
+如果年龄： 大于 170 的<br>
+low = 36.5f;<br>
+mid = 42.5f;
+ 分类     |标准范围
+ -------- | :-----------:
+不足|muscle≤low
+标准|low<muscle≤mid
+优|mid<muscle
+
+### 6.水分
+#### 男性：
+low = 55f;
+mid = 65f;
+#### 女性：
+low = 45f;
+mid = 60f;
+ 分类     |标准范围
+ -------- | :-----------:
+不足|water≤low
+标准|low<water≤mid
+优|mid<water
+	    
+### 7.内脏脂肪等级
+ 分类     |标准范围
+ -------- | :-----------:
+标准|visceral≤9
+警惕|9<visceral≤14
+危险|14<visceral
+	       
+### 8.骨量
+#### 男性：
+如果体重：小于 60kg<br>
+low = 2.4f;<br>
+mid = 2.6f;<br>
+如果体重： 大于等于60， 小于等于75 的<br>
+low = 2.8f;<br>
+mid = 3.0f;<br>
+如果体重： 大于 75 的<br>
+low = 3.1f;<br>
+mid = 3.3f;
+#### 女性：
+如果体重：小于 45kg<br>
+low = 1.7f;<br>
+mid = 1.9f;<br>
+如果体重： 大于等于45， 小于等于60 的<br>
+low = 2.1f;<br>
+mid = 2.3f;<br>
+如果体重： 大于 60 的<br>
+low = 2.4f;<br>
+mid = 2.6f;
+ 分类     |标准范围
+ -------- | :-----------:
+不足|bone≤low
+标准|low<bone≤mid
+优|mid<bone    
+
+### 9.基础代谢	   
+如果年龄：小于等于29 的<br>
+男性：low = weight * 24.0f;<br>
+女性：low = weight * 23.6f;<br>
+如果年龄：大于等于30， 小于等于49 的<br>
+男性：low = weight * 22.3f;<br>
+女性：low = weight * 21.7f;<br>
+如果年龄：大于 49 的<br>
+男性：low = weight * 21.5f;<br>
+女性：low = weight * 20.7f;<br>
+ 分类     |标准范围
+ -------- | :-----------:
+偏低|bmr≤low
+优|low<bmr
+### 10.蛋白质比例
+ 分类     |标准范围
+ -------- | :-----------:
+不足|protein<16
+标准|16≤protein≤20
+优|20<protein	  
+### 11.身体得分
+ 分类     |标准范围
+ -------- | :-----------:
+存在隐患|0-60
+亚健康|60-70
+一般|70-80
+良好|80-90   
+非常好|≥90	   		
     
     
 

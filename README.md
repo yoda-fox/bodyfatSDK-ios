@@ -103,6 +103,10 @@ body.BMR | basal metabolism | double ("%.1f ", body.BMR)) double
   body.waterKg | Moisture|double
   body.waterRate | Water content | double
   body.weight | weight | double
+  body.upFat|Upper limb fat rate|double|
+ body.downFat|Lower limb fat rate|double|
+ body.upMuscle|Upper limb muscle rate|double|
+ body.downMuscle|Lower limb muscle rate|double|
   body.MAC | Device Mac address | NSString | Mac address of the body fat scale device that returns the measurement data
  body.impedanceStatus | Impedance type|int  |  **8 electrodes body up & down scale:** <br>1: Both hands and feet are in contact with the electrodes;<br>2: Only the feet are in contact with the electrodes of the scale; 3: Only the hand touches the electrode of the handle;<br> -1: No hand or foot touches the electrode<br> **Normal body fat scale:** <br>1: The foot is in contact with the electrode of the scale;<br>-1: The foot is not in contact with the electrode of the scale
 body.code | Return status 0 means success, 1 means failure|int
