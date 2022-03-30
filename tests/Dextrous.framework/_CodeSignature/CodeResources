@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/BodySDKManager.h</key>
 		<data>
-		ga3Eau3hXz5woVvCoWzU/O7W5TA=
+		pcQOZ37RV49qIH6lsvNW8k6IADs=
 		</data>
 		<key>Headers/Dextrous.h</key>
 		<data>
@@ -20,9 +20,13 @@
 		<data>
 		rbss9xZ48d7NkbBeJw7fPKSbDGw=
 		</data>
+		<key>Headers/WatchBabyBLE.h</key>
+		<data>
+		s3Jw0VVGDWCZzDe9rrodcoCsWZ0=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		lOouzsK+to8sLS/JkHcOlXINRzs=
+		kpo49Le72373OmQpXLHic4WIhlY=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -54,11 +58,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ga3Eau3hXz5woVvCoWzU/O7W5TA=
+			pcQOZ37RV49qIH6lsvNW8k6IADs=
 			</data>
 			<key>hash2</key>
 			<data>
-			2fTq/c3eOi64WJBR5pv9IM+Avi/qFMC1e+jQE4vXYNU=
+			J/WqOJRHmXqoVLA+6Wk3WyoHNqKZ4Kkx1L5KOx+kxY0=
 			</data>
 		</dict>
 		<key>Headers/Dextrous.h</key>
@@ -81,6 +85,17 @@
 			<key>hash2</key>
 			<data>
 			9hFgFJaUe6UmlbggRLLEMrILZOl2z1GIge+pcOv8gZo=
+			</data>
+		</dict>
+		<key>Headers/WatchBabyBLE.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			s3Jw0VVGDWCZzDe9rrodcoCsWZ0=
+			</data>
+			<key>hash2</key>
+			<data>
+			eyICXGD0NUfkJ6+zTZfmKFNiYijA7gi+xpE5odi1ZGc=
 			</data>
 		</dict>
 		<key>LICENSE</key>

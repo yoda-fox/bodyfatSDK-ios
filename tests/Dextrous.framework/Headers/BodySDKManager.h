@@ -1,9 +1,7 @@
 
 #import <Foundation/Foundation.h>
-
 #import <Dextrous/BodyFatConfig.h>
 #import <Dextrous/ResponseModel.h>
-
 NS_ASSUME_NONNULL_BEGIN
 @class BodySDKManager;
 
